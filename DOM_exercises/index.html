@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="lan-li">
+        <p>السلام عليكم ورحمة الله وبركاته</p>
+        <h1>Programming language</h1>
+        <ul>
+            <li id="first-ln" class="first">javascript</li>
+            <li id="second-ln">kotlin</li>
+            <li id="third-ln">swift</li>
+
+
+        </ul>
+    </div>
+    <div>
+        <h3>clicks <span id="clicks">0</span></h3>
+        <button type="button" onclick="add()">+</button>
+    </div>
+    <script>
+       let kotlin = document.getElementById("second-ln")
+       let javascript = document.getElementsByClassName("first")
+       let list = document.getElementsByTagName("li")
+       let text = document.querySelector("#lan-li p")
+       let ruby = document.createElement('li')
+       let LanList = document.querySelector("ul")
+       kotlin.innerText = "java"
+       ruby.innerText = "ruby"
+       LanList.append(ruby)
+       console.log(kotlin)
+       console.log(javascript)
+       console.log(list[2])
+       console.log(text)
+
+       let clicks=0;
+       function add(){
+        clicks++
+        document.getElementById("clicks").innerText = clicks
+       }
+    </script>
+</body>
+</html>

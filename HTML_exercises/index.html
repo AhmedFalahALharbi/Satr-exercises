@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<!-- 
+              h1 - h6  | عناوين
+              p        | paragraph
+              a        | link
+              div      | container
+              
+              
+              ////////////////// ~edit on text~
+              <h1 dir="rtl">| اتجاه الكتابة من اليمين الى اليسار 
+              b/strong | خط ثقيل
+              i/em     | خط مائل 
+              mark     |  باللون الاصفر تظليل
+              u        | خط تحت الكلام
+              small    | يصغر الخط
+              del      | يشطب عالكلام
+              ins      | inserted text يحط خط تحت الكلمة
+              sub      | ينزل الكلمة قليلا
+              br       | ينزل سطر 
+              sup      | يرفع الكلمة مكان الاسس
+              hr       | يضع خط تحت السطر
+              wbr      | اذا بسي اس اس ضيقت النص يقسم الكلمة او الرابط من المكان اللي تبي
+              bdi      | يعزل الكلمة عن اتجاه الكتابة (يفبد اذا بتكتب كلمة عربية بنص انقليزي)
+              ///////////////////
+              ul       | قائمة غير مرتبة
+              ol       | قائمة مرتبة 
+              li       | list item 
+              span     | تعدل داخل البرقراف ب سي اس اس
+              &...;q   | الرموز ابحث عنها بالنت entities يعني لو تبي تكتب "<p>" كنص
+            q(entities) and blockquote(block) | "" 
+                header,nav,section,footer,article,main,post | div لكن الاسم لتوضيح 
+
+              
+               -->
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <style>
+        body {
+            background-color: rgb(134, 118, 134);
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Titles -->
+    <div>
+        <h1 dir="rtl" id="hhh" class="main_style">بسم الله الرحمن الرحيم</h1>
+        <!--title 1-->
+        <h2 id="hhhh">  hello people</h2>
+        
+        <!--title 2-->
+    </div>
+    <!-- Edit on text -->
+    <div>
+    <p>
+        <strong>HTML</strong> this is the first <b>HTML</b> <mark>test</mark>
+    </p>
+    <!--description-->
+    <p dir="rtl"> يقوم هذا الوسم بعرض <i>النص</i>
+        <br> المكتوب داخله بخط عريض،
+        ويدل استخدامه على أن لهذا <em>النص</em> أهمية وتأثير،
+        فلنفترض أننا أردنا عرض رسالة تذكير بموعد على صفحتنا،
+        فيمكننا كتابة الرسالة بالشكل <sub>التالي</sub>:
+    </p>
+    </div>
+    <hr>
+    <!-- List -->
+    <div>
+    <h3>ترتيب الاعداد </h3>
+    <ol type="I">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <ul type="circle"> غير مرتبة
+        <li>8</li>
+        <li>4</li>
+        <li>6</li>
+    </ul>
+    <!-- attribute
+                      reverse 
+                      start
+                      type
+                      ______________
+                      dl | description list
+                      dt | description item
+                      dd | description discribe
+                -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>web language</dd>
+    </dl>
+    </div>
+    <hr>
+    <!-- media and links -->
+    <div>
+    <p>للمزيد اضغط <a href="https://www.youtube.com/" target="blank">
+            هنا</a></p>
+
+    <img src="EyTykLMXIAEwtfW.jpg" alt="sekiro picture" height="100" width="250">
+    <hr>
+    <!-- controls muted autoplay loop poster -->
+    <video width="200" height="400" controls poster="EyTykLMXIAEwtfW.jpg">
+        <source src="1000.mp4" type="video/mp4">
+        <track src="abc.vtt" label="english" kind="subtitles">
+        
+    </video>
+    <audio src=""></audio>
+    </div>
+    <!-- Table -->
+    <div>
+    <!-- 
+                th | table head
+                tr | table row 
+                td | table item
+                thead tbody tfoot | body of the table
+             -->
+    <hr>
+    <table dir="rtl">
+        <caption>classes days</caption>
+        <tbody>
+            <tr>
+                <th>اليوم</th>
+                <th>المكان</th>
+            </tr>
+            <tr>
+                <td>الاحد</td>
+                <td>math</td>
+            </tr>
+            <tr>
+                <td colspan="2">الاثنين english</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <td colspan="2">test</td>
+        </tfoot>
+
+    </table>
+    </div>
+    <hr>
+    <!-- Form -->
+    <div>
+    <!-- 
+        form | تسليم بيانات يمكن التعديل عليها
+        label | تربطها بالخانة
+        for | تربط الليبل بال ID
+        required |لازم تملئ الخانة 
+        placeholder | كتابة شفافه بالخانة
+        value | قيمة جاهزة داخل الخانة
+        action |  المكان اللي راح يرسل الفورم البيانات
+        method | عند الطلب get عند رفع بيانات post (لاتركز فيها الحين)
+        type="hidden" | خانة مخفية ممكن لو تطلب الاي بي 
+        readonly | ترسله بس ماتقدر تغير قيمته
+        disabled | ماتقدر ترسله او تغير قيمته
+        autofocus | التاشير يبدا من الخانة
+        minlength | اقل عدد حروف 
+        <form novalidate target=_blank>| راح تستخدمهم وقت التست
+     -->
+    <h2>ادخل اسم المستخدم</h2>
+    
+    <form action="" method="" >  
+        
+        <label for="name">username:</label>
+        <input type="text" id="name" required placeholder="name" >
+        <div>
+            <label for="password">password:</label>
+            <input type="password" id="password" required value="123456" minlength="5">
+        </div>
+        <h4>sex</h4>
+        <input type="radio" id="male" name="gender" checked>
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">female</label><br>
+        <p>how are you</p><br>
+        <input type="checkbox" name="fine" id="fine">
+        <label for="fine">fine</label>
+        <input type="checkbox" name="ok" id="ok">
+        <label for="ok">ok</label><br>
+        <label for="city">what is your city</label>
+        <select name="city" id="city" >
+            <optgroup label="الغربية">
+                <option value="makkah" selected>makkah</option>
+            <option value="madinah">madinah</option>
+            </optgroup>
+            <optgroup label="نجد">
+                <option value="riyadh">riyadh</option>
+            </optgroup>
+        </select>
+        <br>
+        <textarea name="area" id="area" cols="10" rows="3"></textarea>
+        <br>
+        <!-- الفرق عن الselect انها قابلة للبحث -->
+        <input list="cities" name="city">
+        <datalist id="cities">
+           
+                <option value="makkah" >makkah</option>
+            <option value="madinah">madinah</option>
+           
+        </datalist>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    </div>
+    <!-- Other -->
+<div>
+    <!-- 
+        pre | يرتب المسافات 
+        code| لكتابة الاكواد
+        iframe | لاضافة موقع داخل موقعك  (استخدام ال الاي بي اي افضل)
+     -->
+    <button>Button</button>
+    <pre>
+        <code>
+            int x = 10;
+            int y = 5;
+        </code>
+    </pre>
+    <iframe src="" frameborder="0"></iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+<!-- this is test for git -->

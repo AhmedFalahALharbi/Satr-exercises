@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>the second try</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+      .header{
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        border-bottom: solid 10px rgb(89, 197, 161);
+      }
+      #header-image{
+        width: 100%;
+        /* height: 100%; */
+        position: relative;
+        
+      }
+      #cover{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.500);
+        
+      }
+      #menu-header{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        direction: rtl;
+      }
+      #menu{
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      #menu > .btn{
+        color: white;
+        text-decoration: none;
+        margin-right: 30px;
+        transition: 0.3s;
+      }
+      #menu > .btn:hover{
+        background-color: gray;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      .active{
+        background-color: rgb(89, 197, 161);
+        padding: 5px;
+        border-radius: 10px;
+      }
+      #main-content{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -270px;
+      }
+      #img-frame{
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(89, 197, 161);
+        border-radius: 50%;
+        margin: 0 auto;
+        transition: 0.3s;
+        box-shadow: 0px 9px 8px lightgray;
+      }
+      #img-frame:hover{
+        box-shadow: 0px 9px 8px grey;
+        padding: 15px;
+      }
+      #img-frame > img{
+        height: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      #centered-content{
+        text-align: center;
+        color: white;
+        font-size: 29;
+      }
+     
+    </style>
+</head>
+<body>
+   <div class="main-header">
+    <div class="header">
+        <img id="header-image" src="aesthetic-wave-border-free-png.webp" alt="">
+        <div id="cover"></div>
+        <div id="menu-header">
+            <div id="menu">
+                <a href="" class="btn active">الرئيسية</a>
+                <a href="" class="btn">دورات</a>
+                <a href="" class="btn">مقالات</a>
+                <a href="" class="btn">مصادر</a>
+                <a href="" class="btn">ملخصات</a>
+            </div>
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="centered-content">
+            <h1>احمد الحربي</h1>
+            <div id="img-frame">
+                <img src="student-avatar-illustration-user-profile-icon-youth-avatar_118339-4405.avif" alt="">
+            </div>
+        </div>
+        
+    </div>
+   </div>
+   
+</body>
+</html>
